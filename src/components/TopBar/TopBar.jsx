@@ -1,14 +1,28 @@
 import React from "react";
 import {TopBarWrapper, TabButton} from "./Topbar.styled";
+import { Link, useLocation } from 'react-router-dom';
 
 const TopBar = () => {
+    const location = useLocation();
+    
     return (
         <TopBarWrapper>
             <nav>
-                <TabButton active>Новини</TabButton>
-                <TabButton>Оголошення</TabButton>
-                <TabButton>Блог</TabButton>
-                <TabButton>Pet Stories</TabButton>
+                <Link to="/">
+                    <TabButton active={location.pathname === '/'}>Новини</TabButton>
+                </Link>
+                
+                <Link to = "/advertisement">
+                    <TabButton active={location.pathname === '/advertisement'}>Оголошення</TabButton>
+                </Link>
+                
+                <Link to = "/blog">
+                    <TabButton active={location.pathname === '/blog'}>Блог</TabButton>
+                </Link>
+                
+                <Link to = "/pet_stories">
+                    <TabButton active={location.pathname === '/pet_stories'}>Pet Stories</TabButton>
+                </Link>
             </nav>
         </TopBarWrapper>
     );
