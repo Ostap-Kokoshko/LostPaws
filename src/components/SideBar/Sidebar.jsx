@@ -1,11 +1,13 @@
 import React from "react";
 import { Home, Users, Bell, Mail } from "lucide-react";
-import { SidebarWrapper, Avatar, MenuItem } from "./Sidebar.styled";
+import { SidebarWrapper, Avatar, MenuItem, Logo} from "./Sidebar.styled";
+import logo from "../../assets/Lostpaws_logo.png";
 
 const Sidebar = () => {
     return (
         <SidebarWrapper>
             <div className="mb-6 text-center">
+                <Logo src={logo} alt="Logo" />
                 <Avatar />
                 <h2 className="font-bold">Test User</h2>
                 <p className="text-sm text-gray-600">Переглянути профіль</p>

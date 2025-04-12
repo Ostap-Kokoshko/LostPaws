@@ -2,9 +2,13 @@ import React from "react";
 import Sidebar from "../../components/Sidebar/Sidebar.jsx";
 import Feed from "../../components/Feed/Feed.jsx";
 import Post from "../../components/Post/Post";
+import PostInput from "../../components/PostInput/PostInput.jsx";
 import TopBar from "../../components/TopBar/TopBar.jsx";
 import RightSidebar from "../../components/RightSidebar/RightSidebar.jsx";
-import { AppContainer, ContentWrapper, MainContent, WtfWrapper, Button, PlusIcon, ButtonContent} from "./Advertisement.styled.jsx";
+import AdvertisementAdd from "../../components/AdvertisementAdd/AdvertisementAdd.jsx"
+import AdvertisementPost from "../../components/AdvertismentPost/AdvertisementPost.jsx"
+import { AppContainer, ContentWrapper, MainContent, ComponentsWrapper } from "./Advertisement.styled.jsx";
+import { Import } from "lucide-react";
 
 
 const AdvertismentPage = () => {
@@ -13,16 +17,14 @@ const AdvertismentPage = () => {
             <Sidebar />
             <ContentWrapper>
                 <MainContent>
-                    <WtfWrapper>
-                        <TopBar/>
-                        <Button>
-                            <PlusIcon>+</PlusIcon>
-                            Створити нове оголошення
-                        </Button>
-                        <Post/>
-                    </WtfWrapper>
+                    <ComponentsWrapper>
+                        <TopBar />
+                        <AdvertisementAdd />
+                        <AdvertisementPost />
+                    </ComponentsWrapper>
                 </MainContent>
             </ContentWrapper>
+            <RightSidebar />
         </AppContainer>
     );
 };

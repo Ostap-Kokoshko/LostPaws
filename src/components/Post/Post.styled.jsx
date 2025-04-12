@@ -1,11 +1,11 @@
 import styled from "styled-components";
 
 export const PostContainer = styled.div`
-    background-color: white;
-    border-radius: 12px;
+    background-color: #D9D9D9;
+    /* border-radius: 12px; */
     padding: 16px;
     margin: 16px 0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
 `;
 
 export const PostHeader = styled.div`

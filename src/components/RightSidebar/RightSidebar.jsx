@@ -1,17 +1,45 @@
 import React from "react";
-import { RightSidebarWrapper, OrgCard, OrgName } from "./RightSidebar.styled";
+import {
+    RightSidebarWrapper,
+    SearchWrapper,
+    SearchInput,
+    OrgBox,
+    OrgCard,
+    OrgAvatar,
+    OrgName,
+    OrgCheckIcon,
+    MoreButton
+} from "./RightSidebar.styled";
+import { Search, CheckCheck } from "lucide-react";
 
 const RightSidebar = () => {
+    const organizations = [
+        "Korean Dog lovers",
+        "Korean Dog lovers",
+        "Korean Dog lovers",
+        "Korean Dog lovers",
+    ];
+
     return (
         <RightSidebarWrapper>
-            <h3 className="font-semibold mb-4">Популярні організації</h3>
-            {[1, 2, 3, 4].map((id) => (
-                <OrgCard key={id}>
-                    <div className="w-8 h-8 bg-orange-300 rounded-full" />
-                    <OrgName>Dog lovers</OrgName>
-                </OrgCard>
-            ))}
-            <p className="text-blue-500 mt-2 cursor-pointer">Більше</p>
+            <SearchWrapper>
+                <SearchInput type="text" placeholder="Пошук" />
+                <Search size={16} />
+            </SearchWrapper>
+
+            <OrgBox>
+                <h3 className="font-semibold mb-2">Популярні організації</h3>
+                {organizations.map((org, index) => (
+                    <OrgCard key={index}>
+                        <OrgAvatar />
+                        <OrgName>{org}</OrgName>
+                        <OrgCheckIcon>
+                            <CheckCheck size={16} />
+                        </OrgCheckIcon>
+                    </OrgCard>
+                ))}
+                <MoreButton>Більше</MoreButton>
+            </OrgBox>
         </RightSidebarWrapper>
     );
 };

@@ -2,26 +2,32 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 export const SidebarWrapper = styled.div`
-  width: 23rem;
-  background-color: #f3f4f6;
+  width: 240px;
+  background-color: #D9D9D9;
   padding: 1rem;
-  display: flex;
-  flex-direction: column;
+  border-right: 1px solid #0000002f;
+`;
+
+export const Logo = styled.img`
+  width: 200px;
+  height: auto;
+  margin: 0 auto 1rem;
+  display: block;
 `;
 
 export const Avatar = styled.div`
   width: 6rem;
   height: 6rem;
-  background-color: #d1d5db;
+  background-color: #e0bf03;
   border-radius: 9999px;
   margin: 0 auto 0.5rem;
 `;
 
 export const MenuItem = ({ to, icon, label }) => (
-    <StyledLink to={to}>
-        {icon}
-        {label}
-    </StyledLink>
+  <StyledLink to={to}>
+    {icon}
+    {label}
+  </StyledLink>
 );
 
 const StyledLink = styled(Link)`

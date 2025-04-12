@@ -1,12 +1,15 @@
 import styled from "styled-components";
 
 export const TopBarWrapper = styled.div`
-    background-color: #ffffff;
+    background-color: #D9D9D9;
     padding: 10px 30px;
     display: flex;
     gap: 30px;
     font-weight: 500;
     border-bottom: 1px solid #ddd;
+    position: sticky;
+    top: 0;
+    z-index: 5;
 `;
 
 export const TabButton = styled.button`

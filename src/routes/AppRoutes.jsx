@@ -7,7 +7,7 @@ const AppRoutes = () => (
         <Route path="/" element={<Home />} />
         <Route path="/advertisement" element={<AdvertismentPage />} />
         {/* <Route path="/blog" element={<Blog />} /> */}
-        {/*<Route path="/pet_stories" element={<PetStories />} />*/}
+        {/* <Route path="/pet_stories" element={<PetStories />} />*/}
     </Routes>
 );
 

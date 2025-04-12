@@ -1,15 +1,14 @@
 import React from "react";
-import { FeedWrapper } from "./Feed.styled";
-import PostInput from "../PostInput/PostInput";
-import Post from "../Post/Post";
-import TopBar from "../../components/TopBar/TopBar.jsx";
+import TopBar from "../TopBar/TopBar.jsx";
+import PostInput from "../PostInput/PostInput.jsx";
+import Post from "../Post/Post.jsx";
+import { FeedWrapper } from "../Feed/Feed.styled.jsx";
 
 const Feed = () => {
     return (
         <FeedWrapper>
             <TopBar />
             <PostInput />
-            <Post />
             <Post />
         </FeedWrapper>
     );
